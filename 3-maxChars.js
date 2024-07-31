@@ -5,7 +5,6 @@
 // maxChar("abcccccccd") === "c"
 // maxChar("apple 1231111") === "1"
 
-
 function maxChars(string) {
   let charMap = {};
   let max = 0;

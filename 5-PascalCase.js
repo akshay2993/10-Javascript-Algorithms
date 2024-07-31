@@ -8,13 +8,19 @@
 //   capitalize('titles of books, movies, songs, plays and other works') --> 'Titles Of Books, Movies, Songs, Plays And Other Works'
 
 function capitalize(string) {
-    const strArr = string.split(' ')
-    console.log(strArr)
+    const words = string.split(' ')
+    const result = []
 
-    for(word of strArr){
-        console.log(word.slice(0,1).toUpperCase())
-        
+    for(let word of words){
+        const capitalized = word[0].toUpperCase() + word.slice(1)
+        result.push(capitalized)
     }
+
+    return result.join(' ')
+
+    // or
+
+    // return(words.map(word => word[0].toUpperCase()+word.slice(1)).join(' '))
 }
 
-capitalize('this is mukhtar from coding money')
+console.log(capitalize('this is mukhtar from coding money'))
